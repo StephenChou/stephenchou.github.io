@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
 
 * {
     margin: 0;
@@ -8,35 +10,60 @@
 
 html, body {
     height: 100%;
+    background-color: #f0f0f0;
+
 }
 
-p {
+h1 {
     font-family: Montserrat;
-    color: black;
+    color: #2a303b;
+    font-weight: 800;
+    font-size: 4rem;
 }
 
-a {
+a, p, strong {
     font-family: Montserrat;
+    color: #2a303b;
+    font-weight: 600;
 }
 
-.main {
+.container {
     min-height: 100%;
-    padding-bottom: 100px;
-    overflow: auto;
     text-align: center;
 }
 
+.main {
+    padding-bottom: 80px;
+    overflow: auto;
+    /* margin: 0 auto; */
+    text-align: center;
+    /* padding-top: 2%;
+    width: 60%; */
+    padding: 30px;
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 10%;
-    background-color: #292929;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 19rem)); */
 }
 
 #name {
-    font-size: 1.2rem;
-    color: white;
+    margin-right: auto;
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+#name:hover {
+    opacity: 0.7;
+}
+
+.header {
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: white;
+    box-shadow: 3px 7px 10px rgba(0, 0, 0, 0.1);
 }
 
 #nav_links li {
@@ -46,32 +73,90 @@ a {
 }
 
 #nav_links li a {
-    color: white;
     text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    opacity: 1;
+    transition: 0.2s;
+    
 }
 
 #nav_links li a:hover {
-    text-decoration: underline;
+    opacity: 0.7;
 }
 
-#button {
-    font-family: Montserrat;
-    color: white;
+button {
     border: none;
-    width: 80px;
+    background-color: #34abeb;
+    margin-left: 20px;
+    border-radius: 50px;
+    width: 100px;
     height: 40px;
-    background-color: red;
+    font-family: Montserrat;
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    opacity: 1;
+    transition: 0.2s;
+    cursor: pointer;
+
 }
 
+button:hover {
+    opacity: 0.7;
+}
+
+
+label {
+    font-family: Montserrat;
+
+}
+
+.project-container {
+    /* display: grid;
+    grid-template-columns: repeat(2, auto); */
+    justify-content: space-evenly;
+
+}
+
+.box {
+    width: 400px;
+    height: 250px;
+    border-radius: 40px;
+    background-color: #34abeb;
+    margin: 0 auto;
+    margin-top: 30px;
+    box-shadow: 3px 7px 10px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: 0.2s;
+    cursor: pointer;
+
+}
+
+.box:hover {
+    transform: translateY(-2%);
+    opacity: 0.9;
+}
+
+#surprisify {
+    line-height: 250px;
+}
+
+
+#surprisify img {
+    width: 250px;
+    height: auto;
+    
+}
 
 
 footer {
     width: 100%;
-    height: 100px;
+    height: 80px;
     text-align: center;
-    background-color: #292929;
-    margin-top: -100px;
+    background-color: white;
+    /* margin-top: -80px; */
     clear: both;
+    line-height: 80px;
 }
 
 footer li {
@@ -79,4 +164,30 @@ footer li {
     padding: 0 30px;
 }
 
+footer li a {
+    text-decoration: none;
+    opacity: 1;
+    transition: 0.2s;
+}
 
+footer li a:hover {
+    opacity: 0.6;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    #playlist-description {
+        height: 100vh;
+    }
+
+    body {
+        /* background-color: red; */
+    }
+
+   }
+
+@media only screen and (max-width: 700px) {
+    body {
+        /* background-color: blue; */
+    }
+}
